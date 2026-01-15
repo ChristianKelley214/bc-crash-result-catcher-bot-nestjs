@@ -23,7 +23,7 @@ Create a `.env` file in the project root with the following variables:
 
 ```env
 # Server Configuration
-PORT=8000
+PORT=8001
 
 # Chrome Debug Configuration
 DEBUG_PORT=9225
@@ -41,7 +41,7 @@ CSV_RESULTS_DIR=./results
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `PORT` | `8000` | Port for the NestJS HTTP server |
+| `PORT` | `8001` | Port for the NestJS HTTP server |
 | `DEBUG_PORT` | `9225` | Chrome remote debugging port |
 | `CHROME_TARGET_URL` | `https://bc.game/en/game/crash?type=classic` | URL to open in Chrome |
 | `CLOSE_DEBUG_BROWSER_WHEN_BOT_STOP` | `true` | Whether to close Chrome when bot stops (`true`/`false`) |
@@ -117,16 +117,16 @@ npm run start:debug
 
 ```bash
 # Start monitoring with CSV saving
-curl -X POST http://localhost:8000/crash/monitor?save=true
+curl -X POST http://localhost:8001/crash/monitor?save=true
 
 # Get last crash result
-curl http://localhost:8000/crash/last-result
+curl http://localhost:8001/crash/last-result
 
 # Get account balance
-curl http://localhost:8000/crash/balance
+curl http://localhost:8001/crash/balance
 
 # Stop monitoring
-curl -X POST http://localhost:8000/crash/monitor/stop
+curl -X POST http://localhost:8001/crash/monitor/stop
 ```
 
 ## Project Structure
@@ -175,7 +175,7 @@ If you get an `EADDRINUSE` error:
 
 1. **Find the process using the port:**
    ```powershell
-   netstat -ano | findstr :8000
+   netstat -ano | findstr :8001
    ```
 
 2. **Kill the process:**

@@ -6,7 +6,7 @@ import { AppBootstrapService } from './app-bootstrap.service';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
-  let port = configService.get<number>('PORT') || 8000;
+  let port = configService.get<number>('PORT') || 8001;
   
   // Try to listen on the port, or find an available port
   try {
