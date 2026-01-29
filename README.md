@@ -241,7 +241,9 @@ npm run test:cov
 
 ## Donate: Give me a coffee
 Tron	TUCio5UkWEwB3RbRyDDq3ujMgjPzdBipAt
+
 Eth / BNB	0xC8008ABaf924359a06Ce07293DB722fE4d0e3c72
+
 Sol	9z7dnoNMqT28Bs24te4pFtevsFJMZB42fyHNTyXazCMp
 
 ## License
